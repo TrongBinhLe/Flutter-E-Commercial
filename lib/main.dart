@@ -1,3 +1,4 @@
+import 'package:e_commerce/contraints.dart';
 import 'package:e_commerce/screens/home/home_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +13,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(),
+      theme: ThemeData(
+        textTheme: Theme.of(context).textTheme.apply(bodyColor: kTextColor),
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
       home: HomeScreen(),
     );
   }
